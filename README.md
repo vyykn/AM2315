@@ -22,7 +22,7 @@ Probably requires running node under `sudo` for I2C permissions, unless you've u
 
 ## API
 
-### spi.read(cb(err, data){})
+### sensor.read(cb(err, data){})
 
 Collects the current Temerature and Humidity from the AM2315 via I2C on the Raspberry Pi and returns them as an array (data[temp, humidity]) with your callback.
 
