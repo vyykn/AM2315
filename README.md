@@ -5,11 +5,11 @@ Simple asyncronous node.js library for reading the AM2315 I2C via Raspberry Pi
 
 ## Example
 
-`npm install AM2315`
+`npm install am2315`
 
 
 ```
-var sensor = require('AM2315');
+var sensor = require('am2315');
 
 // Get the current Temp and Humidity
 sensor.read(function(err, data){

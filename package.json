@@ -1,5 +1,5 @@
 {
-  "name": "AM2315",
+  "name": "am2315",
   "version": "1.0.0",
   "description": "Simple async AM2315 Temp and Humidity Sensor library for Raspberry Pi",
   "main": "index.js",
@@ -19,5 +19,9 @@
   "license": "BSD-2-Clause",
   "bugs": {
     "url": "http://github.com/vyykn/AM2315/issues"
-  }
+  },
+  "scripts": {
+    "install": "node-gyp rebuild"
+  },
+  "gypfile": true
 }
