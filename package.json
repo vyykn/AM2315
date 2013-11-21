@@ -1,0 +1,23 @@
+{
+  "name": "AM2315",
+  "version": "1.0.0",
+  "description": "Simple async AM2315 Temp and Humidity Sensor library for Raspberry Pi",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/vyykn/AM2315"
+  },
+  "keywords": [
+    "am2315",
+    "raspi",
+    "i2c",
+    "temp",
+    "humidity",
+    "sensor"
+  ],
+  "author": "Brian Egizi and Cody Garvin",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "http://github.com/vyykn/AM2315/issues"
+  }
+}
