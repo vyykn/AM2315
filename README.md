@@ -37,7 +37,7 @@ This library is subject to change.
 
 ## License
 
-Copyright © 2013, Nathan Vander Wilt.
+Copyright © 2013, Brian Egizi
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
