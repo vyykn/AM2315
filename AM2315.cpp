@@ -66,6 +66,16 @@ Handle<Value> AM2315(const Arguments& args) {
     uv_work_t *req = new uv_work_t();
     req->data = baton;
 
+
+
+    // Initialize I2C Comunication
+    address = 0x5c;//92
+
+    bcm2835_init();
+    bcm2835_i2c_set_baudrate(100000);
+    bcm2835_i2c_begin();
+    bcm2835_i2c_setSlaveAddress(address);
+
     // Schedule our work request with libuv. Here you can specify the functions
     // that should be executed in the threadpool and back in the main thread
     // after the threadpool function completed.
@@ -83,17 +93,10 @@ Handle<Value> AM2315(const Arguments& args) {
 // convert them to PODs or some other fancy method.
 void AM2315Work(uv_work_t* req) {
     Baton* baton = static_cast<Baton*>(req->data);
-
-    address = 0x5c;//92
     func=3;
     start=0;
     num=4;
     rhtfactor = 0.1;
-
-    bcm2835_init();
-    bcm2835_i2c_set_baudrate(100000);
-    bcm2835_i2c_begin();
-    bcm2835_i2c_setSlaveAddress(address);
 
     //Function start
     char writebuf[3] = {func, start, num};
