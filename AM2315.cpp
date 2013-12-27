@@ -7,7 +7,7 @@
 #include <sys/types.h>
 #include <linux/i2c-dev.h>
 
-#include <src/bcm2835.h>
+#include "bcm2835.h"
 
 using namespace v8;
 
