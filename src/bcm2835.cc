@@ -16,7 +16,9 @@
 #include <time.h>
 #include <unistd.h>
 
-#include "bcm2835.h"
+extern "C"  {
+#include "src/bcm2835.h"
+}
 
 // This define enables a little test program (by default a blinking output on pin RPI_GPIO_PIN_11)
 // You can do some safe, non-destructive testing on any platform with:
