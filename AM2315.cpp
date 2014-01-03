@@ -211,6 +211,10 @@ void AM2315After(uv_work_t* req) {
     // The callback is a permanent handle, so we have to dispose of it manually.
     baton->callback.Dispose();
 
+    //Close out BCM2835 to prevent memory leak... hopefully.
+    bcm2835_i2c_end();
+    bcm2835_close();
+
     // We also created the baton and the work_req struct with new, so we have to
     // manually delete both.
     delete baton;
